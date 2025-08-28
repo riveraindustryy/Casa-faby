@@ -1,4 +1,12 @@
 <!doctype html>
+<!--
+  Este archivo es una versión modificada del sitio original de “La Casa de Doña Fabi”.
+  Se actualizó la información de contacto, el número telefónico y se añadieron
+  enlaces a Instagram.  Además, se reemplazaron los acabados de color verde
+  por un rojo vibrante consistente con la nueva imagen corporativa.  Por último
+  se actualizó el logotipo, que debe estar disponible en este mismo directorio
+  como “LOGO.png”.
+-->
 <html lang="es-MX">
 <head>
   <meta charset="utf-8" />
@@ -7,17 +15,25 @@
   <meta name="description" content="Antojitos, barbacoa y tacos caseros en CDMX. Menú, horarios, promociones y contacto por WhatsApp." />
   <meta property="og:title" content="La Casa de Doña Fabi" />
   <meta property="og:description" content="El hogar del sazón que une familias." />
-  <meta name="theme-color" content="#006E3A" />
+  <!-- Cambiamos el color del tema de verde a rojo -->
+  <meta name="theme-color" content="#D32F2F" />
   <style>
     :root{
-      --verde:#006E3A; --rojo:#D32F2F; --amarillo:#FBC02D; --crema:#FAF3E0; --marron:#6D4C41;
-      --ink:#1c1c1c; --muted:#666; --bg:#fff;
+      /* Se redefine el verde para que sea el mismo valor de rojo */
+      --verde:#D32F2F;
+      --rojo:#D32F2F;
+      --amarillo:#FBC02D;
+      --crema:#FAF3E0;
+      --marron:#6D4C41;
+      --ink:#1c1c1c;
+      --muted:#666;
+      --bg:#fff;
     }
     *{box-sizing:border-box}
     body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Inter,Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg)}
 
-    /* Header / Hero */
-    .hero{background:linear-gradient(180deg, rgba(0,110,58,.12), transparent 60%); padding:28px 18px}
+    /* Encabezado y héroe */
+    .hero{background:linear-gradient(180deg, rgba(211,47,47,.12), transparent 60%); padding:28px 18px}
     .wrap{max-width:1100px;margin:0 auto}
     .brand{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:center}
     .logo{width:96px;height:96px;border-radius:999px;box-shadow:0 8px 30px rgba(0,0,0,.25);object-fit:contain;background:#fff}
@@ -27,15 +43,16 @@
     .btn{appearance:none;border:2px solid var(--verde);background:var(--verde);color:#fff;padding:12px 16px;border-radius:12px;font-weight:800;text-decoration:none}
     .btn.outline{background:#fff;color:var(--verde)}
     .status{font-weight:900;margin-left:6px}
-    .open{color:#0a8f4d}.closed{color:var(--rojo)}
+    .open{color:var(--rojo)}
+    .closed{color:var(--rojo)}
 
-    /* Nav */
-    nav{background:#0a6b3a;color:#fff}
+    /* Navegación */
+    nav{background:var(--rojo);color:#fff}
     nav .bar{display:flex;gap:20px;justify-content:center;padding:10px}
     nav a{color:#fff;text-decoration:none;font-weight:700;opacity:.95}
     nav a:hover{opacity:1;text-decoration:underline}
 
-    /* Sections */
+    /* Secciones */
     section{padding:32px 18px}
     .card{background:#fff;border:1px solid #eee;border-radius:16px;box-shadow:0 8px 28px rgba(0,0,0,.05);padding:22px}
     h2{margin:0 0 14px;font-size:clamp(22px,3vw,30px);color:var(--verde)}
@@ -53,10 +70,10 @@
     /* Horarios */
     table{width:100%;border-collapse:collapse;border:1px solid #eee;border-radius:14px;overflow:hidden}
     th,td{padding:12px 14px;border-bottom:1px solid #f2f2f2;text-align:left}
-    thead th{background:#0a6b3a;color:#fff}
+    thead th{background:var(--rojo);color:#fff}
     tbody tr:nth-child(even){background:#fafafa}
 
-    /* Promos */
+    /* Promociones */
     .promo{display:grid;grid-template-columns:1fr 1fr;gap:16px}
     .tile{border-radius:14px;padding:18px;font-weight:800;background:#ffecc0}
     .tile strong{color:#a03300}
@@ -78,14 +95,14 @@
   <header class="hero">
     <div class="wrap">
       <div class="brand">
-        <!-- Reemplaza LOGO.png por tu archivo real (PNG/SVG/JPG) en el repositorio -->
-        <img class="logo" src="LOGO.png" alt="Logo La Casa de Doña Fabi"
-             onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 240 240%22><defs><style>.t{font:700 16px Arial}</style></defs><circle cx=%22120%22 cy=%22120%22 r=%22110%22 fill=%22%23006E3A%22/><circle cx=%22120%22 cy=%22120%22 r=%2294%22 fill=%22none%22 stroke=%22%23FAF3E0%22 stroke-width=%228%22/><text class=%22t%22 x=%22120%22 y=%22115%22 fill=%22%23FAF3E0%22 text-anchor=%22middle%22>LA CASA DE</text><text class=%22t%22 x=%22120%22 y=%22140%22 fill=%22%23FAF3E0%22 text-anchor=%22middle%22>DOÑA FABI</text></svg>';"><!-- replaced alt-->
+        <!-- Se utiliza el nuevo logotipo proporcionado por el usuario -->
+        <img class="logo" src="LOGO.png" alt="Logo La Casa de Doña Fabi">
         <div>
           <h1>La Casa de Doña Fabi</h1>
           <div class="tagline">El hogar del sazón que une familias</div>
           <div class="cta-row">
-            <a class="btn" href="tel:+525618480025">Ordenar ahora · 56 1848 0025</a>
+            <!-- Se actualiza el número telefónico -->
+            <a class="btn" href="tel:+525554723179">Ordenar ahora · 55 5472 3179</a>
             <span id="status" class="status" aria-live="polite"></span>
           </div>
         </div>
@@ -229,11 +246,17 @@
     <section id="contacto" class="wrap">
       <div class="card" style="background:transparent;border:none;box-shadow:none;padding:0">
         <h2>Contacto</h2>
-        <p>Av. de los Sabores 123, Ciudad de México, CDMX.</p>
-        <p><strong>Teléfono:</strong> <a href="tel:+525618480025" style="color:#fff;text-decoration:underline">56 1848 0025</a></p>
+        <!-- Se actualiza la dirección -->
+        <p>calle villa urrutia num 22, Paulino Navarro, Cuauhtémoc, Ciudad de México.</p>
+        <!-- Se actualiza el número de teléfono -->
+        <p><strong>Teléfono:</strong> <a href="tel:+525554723179" style="color:#fff;text-decoration:underline">55 5472 3179</a></p>
+        <!-- Correo permanece igual -->
         <p><strong>Correo:</strong> <a href="mailto:info@lacasadefabi.mx" style="color:#fff;text-decoration:underline">info@lacasadefabi.mx</a></p>
+        <!-- Nuevo enlace a Instagram -->
+        <p><strong>Instagram:</strong> <a href="https://www.instagram.com/_casa_fabi_80?igsh=MXJnaDdlcWk2eXd2NA==" target="_blank" style="color:#fff;text-decoration:underline">@_casa_fabi_80</a></p>
         <div class="cta">
-          <a class="btn btn-wa" href="https://wa.me/525618480025" target="_blank" rel="noopener">WhatsApp</a>
+          <!-- Se actualiza el enlace de WhatsApp con el nuevo número -->
+          <a class="btn btn-wa" href="https://wa.me/525554723179" target="_blank" rel="noopener">WhatsApp</a>
           <a class="btn outline" href="#menu" style="border-color:#fff;color:#fff">Ver menú</a>
         </div>
       </div>
@@ -267,7 +290,7 @@
       if(hero){hero.textContent=msg; hero.className='status '+(isOpen?'open':'closed');}
     }
     renderEstado(); setInterval(renderEstado, 60000);
-    // Año
+    // Año actual
     document.getElementById('year').textContent=new Date().getFullYear();
   </script>
 </body>
